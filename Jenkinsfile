@@ -30,7 +30,7 @@ pipeline {
         stage('Update Deployment YAML') {
             steps {
                 script {
-                    updateDeploymentYaml("${imageName}", "${BUILD_NUMBER}")
+                    updateDeployment("${imageName}", "${BUILD_NUMBER}")
                 }
             }
         }
