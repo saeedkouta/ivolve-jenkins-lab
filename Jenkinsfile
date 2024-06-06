@@ -30,10 +30,7 @@ pipeline {
         stage('Update Deployment YAML') {
             steps {
                 script {
-                    // Update the image in the deployment.yml file
-                    sh """
-                    sed -i 's|image: .*|image: ${imageName}:${env.BUILD_NUMBER}|g' deployment.yml
-                    """
+                    updateDeploymentYaml("${imageName}", ${BUILD_NUMBER}")
                 }
             }
         }
