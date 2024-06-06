@@ -1,16 +1,16 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: jenkins-project-deployment
+  name: jenkins-lab2-deployment
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: jenkins-project
+      app: jenkins-lab2
   template:
     metadata:
       labels:
-        app: jenkins-project
+        app: jenkins-lab2
     spec:
       containers:
       - name: jenkins-project
