@@ -4,7 +4,7 @@ pipeline {
     
     environment {
         dockerHubCredentialsID = 'DockerHub'                          // DockerHub credentials ID.
-        imageName              = 'saeedkouta/jenkins-lab'         // DockerHub repo/image name.
+        imageName              = 'saeedkouta/jenkins-lab2'         // DockerHub repo/image name.
         openshiftCredentialsID = 'openshift-token'                    // service account token credentials ID
         openshiftClusterURL    = 'https://api.ocp-training.ivolve-test.com:6443' // OpenShift Cluster URL.
         openshiftProject       = 'saeedkouta'                         // OpenShift project name.
