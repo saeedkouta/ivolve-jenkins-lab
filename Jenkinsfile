@@ -45,6 +45,10 @@ pipeline {
     }
 
     post {
+        always {
+            echo "Pipeline completed."
+        cleanWs() // Clean workspace after the build is finished
+        }
         success {
             echo "${JOB_NAME}-${BUILD_NUMBER} pipeline succeeded"
         }
