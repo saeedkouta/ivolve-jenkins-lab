@@ -4,7 +4,7 @@ metadata:
   name: jenkins-lab2-service
 spec:
   selector:
-    app: jenkins-project
+    app: jenkins-lab2
   ports:
     - protocol: TCP
       port: 5000
