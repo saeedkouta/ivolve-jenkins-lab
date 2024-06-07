@@ -13,7 +13,7 @@ spec:
         app: jenkins-lab2
     spec:
       containers:
-      - name: jenkins-project
+      - name: jenkins-lab2
         image: saeedkouta/Jenkins-project:v1
         ports:
         - containerPort: 5000
