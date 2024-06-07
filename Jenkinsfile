@@ -27,17 +27,18 @@ pipeline {
                 }
             }
         }
-        stage('Update Deployment YAML') {
-            steps {
-                script {
-                    updateDeployment("${imageName}", "${BUILD_NUMBER}")
-                }
-            }
-        }
+
         stage('Deploy on OpenShift Cluster') {
             steps {
                 script { 
                     deployToOpenShift("${openshiftCredentialsID}", "${openshiftClusterURL}", "${openshiftProject}", "${imageName}")
+                }
+            }
+        }
+        stage('Update Deployment YAML') {
+            steps {
+                script {
+                    updateDeployment("${imageName}", "${BUILD_NUMBER}")
                 }
             }
         }
