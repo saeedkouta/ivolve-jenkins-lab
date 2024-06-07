@@ -12,11 +12,11 @@
 
 #### Deploymentfile With image that will be updated:
 
-<img src="https://github.com/saeedkouta/ivolve-jenkins-lab2/assets/167209058/e870bad2-5a83-4e49-b062-354b9315229b" width="1000" > 
+<img src="https://github.com/saeedkouta/ivolve-jenkins-lab2/assets/167209058/865fe490-957f-4a0f-977a-d934b3a87776" width="1000" > 
 
 #### Servicefile:
 
-<img src="https://github.com/saeedkouta/ivolve-jenkins-lab2/assets/167209058/b518fa4e-361f-4c4e-b74e-e8d5fdb7c2ec" width="1000" > 
+<img src="https://github.com/saeedkouta/ivolve-jenkins-lab2/assets/167209058/a64bdc9e-01a1-4765-a788-0a351d1c2927" width="1000" > 
 
 ### Step 1: Create Jenkinsfile
 
