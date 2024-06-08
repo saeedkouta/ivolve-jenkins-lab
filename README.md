@@ -1,12 +1,12 @@
 # Description
 ## Set up pipeline to deploy App. Using Jenkinsfile
 ### Steps:
-### Build Docker image from Dockerfile in GitHub
-### Push image to Docker hub
-### Edit new image in deployment.yaml file
-### Deploy to OC
-### Use Jenkins shared libraries
-### Set pipeline post action (always, success, failure)
+#### *Build Docker image from Dockerfile in GitHub
+#### *Push image to Docker hub
+#### *Edit new image in deployment.yaml file
+#### *Deploy to OC
+#### *Use Jenkins shared libraries
+#### *Set pipeline post action (always, success, failure)
 
 ### Step 1: Create Deployment and Service Files
 
