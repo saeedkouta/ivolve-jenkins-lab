@@ -68,7 +68,7 @@ agent any
 ```
 
 #### *using Post (always, success, failure)
-```json
+```groovy
     post {
         always {
             echo "Pipeline completed."
