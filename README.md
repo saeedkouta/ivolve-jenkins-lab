@@ -21,17 +21,17 @@
 ### Step 1: Create Jenkinsfile
 
 #### *using Shared Library:
-```
+```groovy
 @Library('shared-library')_
 ```
 
 #### *using Agent Any:
-```
+```groovy
 agent any
 ```
 
 #### *using 4 Stages (Build, Push, Deploy, Update)
-```
+```groovy
  stages {
         stage('Build Docker Image') {
             steps {
@@ -68,7 +68,7 @@ agent any
 ```
 
 #### *using Post (always, success, failure)
-```
+```json
     post {
         always {
             echo "Pipeline completed."
@@ -86,7 +86,7 @@ agent any
 ### Stage 2: Create Shared Library
 
 #### *buildDockerImage.groovy
-```
+```groovy
 #!usr/bin/env groovy
 def call(String imageName) {
 
@@ -97,7 +97,7 @@ def call(String imageName) {
 ```
 
 #### *pushDockerImage.groovy
-```
+```groovy
 #!usr/bin/env groovy
 def call(String dockerHubCredentialsID, String imageName) {
 
@@ -113,7 +113,7 @@ def call(String dockerHubCredentialsID, String imageName) {
 ```
 
 #### *deployToOpenShift.groovy
-```
+```groovy
 #!/usr/bin/env groovy
 
 //OpenShiftCredentialsID can be credentials of service account token or KubeConfig file 
@@ -131,7 +131,7 @@ def call(String OpenShiftCredentialsID, String openshiftClusterurl, String opens
 [This is the repo of the Shared Library](https://github.com/saeedkouta/jenkins-oc-shared-library.git)
 
 #### updateDeployment.groovy
-```
+```groovy
 def call(String imageName, BUILD_NUMBER) {
     // Update the image in the deployment.yml file
     sh """
@@ -143,7 +143,7 @@ def call(String imageName, BUILD_NUMBER) {
 ### Step 3: Create Jenkins-Matser
 
 #### Iam Using As docker Container As Jenkins-Master and this is it's Configration
-```
+```bash
 sudo docker run -p 8080:8080 -p 50000:50000 -d \
  -v jenkins_home:/var/jenkins_home \
  -v /var/run/docker.sock:/var/run/docker.sock \
